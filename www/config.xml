@@ -21,6 +21,7 @@
         The "device" permission is required for the 'deviceready' event.
     
     <feature name="http://api.phonegap.com/1.0/device" />
+	<preference name="permissions"                value="none"/>
 	-->
 	
 	<gap:plugin name="org.apache.cordova.battery-status" />
@@ -48,7 +49,7 @@
         following tag to your config.xml; you will still have the INTERNET
         permission on your app, which PhoneGap requires.
     -->
-    <preference name="permissions"                value="none"/>
+    
 
     <!-- Customize your app and platform with the preference element. -->
     <preference name="orientation"                value="default" />        <!-- all: default means both landscape and portrait are enabled -->
