@@ -42,18 +42,20 @@
 
     // Upload files to server
     function uploadFile(mediaFile) {
+    	alert('uploadFile');
         var ft = new FileTransfer(),
             path = mediaFile.fullPath,
             name = mediaFile.name;
-
+alert('path: ' + mediaFile.fullPath);
+alert('name: ' + mediaFile.name);
         ft.upload(path,
-            "http://my.domain.com/upload.php",
+            "http://localhost:49379/Blrb/Create",
             function(result) {
-                console.log('Upload success: ' + result.responseCode);
-                console.log(result.bytesSent + ' bytes sent');
+                alert('Upload success: ' + result.responseCode);
+                alert(result.bytesSent + ' bytes sent');
             },
             function(error) {
-                console.log('Error uploading file ' + path + ': ' + error.code);
+                alert('Error uploading file ' + path + ': ' + error.code);
             },
             { fileName: name });
     }
