@@ -37,7 +37,7 @@
     function captureAudio() {
         // Launch device video recording application,
         // allowing user to capture up to 2 video clips
-        navigator.device.capture.captureAudio(captureSuccess,captureError);
+        navigator.device.capture.captureAudio(captureSuccess,captureError,{duration:6});
     }
 
     // Upload files to server
