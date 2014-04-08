@@ -49,13 +49,13 @@
 alert('path: ' + mediaFile.fullPath);
 alert('name: ' + mediaFile.name);
         ft.upload(path,
-            "http://localhost:49379/Blrb/Create",
+            "http://blrbrdev.azurewebsites.net/Blrb/UploadAudio",
             function(result) {
                 alert('Upload success: ' + result.responseCode);
                 alert(result.bytesSent + ' bytes sent');
             },
             function(error) {
-                alert('Error uploading file ' + path + ': ' + error.message);
+                alert('Error uploading file ' + path + ': ' + error.code);
             },
             { fileName: name });
     }
