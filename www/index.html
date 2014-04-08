@@ -32,6 +32,15 @@
     }
 
     // Upload files to server
+    // A button will call this function
+    //
+    function captureAudio() {
+        // Launch device video recording application,
+        // allowing user to capture up to 2 video clips
+        navigator.device.capture.captureAudio(captureSuccess,captureError);
+    }
+
+    // Upload files to server
     function uploadFile(mediaFile) {
         var ft = new FileTransfer(),
             path = mediaFile.fullPath,
@@ -53,5 +62,6 @@
     </head>
     <body>
         <button onclick="captureVideo();">Capture Video</button> <br>
+       <button onclick="captureAudio();">Capture Audio</button> <br>
     </body>
 </html>
